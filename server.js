@@ -27,6 +27,6 @@ app.get("/ping", (req, res) => {
   res.send("Node api");
 });
 
-app.listen(5000, () => {
-  console.log("Server start");
-});
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => console.log(`api live on port ${PORT}`));
